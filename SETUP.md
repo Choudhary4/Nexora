@@ -1,82 +1,70 @@
-# Quick Start Guide
+# Getting Started
 
-## Option 1: Quick Start (Without MongoDB)
+Two ways to run this - with or without MongoDB. Either works fine.
 
-### Terminal 1 - Backend:
+## The Simple Way (No Database Setup)
+
+Just need Node.js installed.
+
+**Terminal 1:**
 ```bash
 cd backend
 npm install
 npm start
 ```
-Server runs on http://localhost:5000
-(Uses in-memory storage automatically if MongoDB not available)
 
-### Terminal 2 - Frontend:
+**Terminal 2:**
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-App runs on http://localhost:5173
 
-## Option 2: With MongoDB
+Open http://localhost:5173 and you're set. The backend will store everything in memory.
 
-### 1. Start MongoDB:
+## With MongoDB
+
+If you want the cart to persist between restarts:
+
+**Start MongoDB first:**
 ```bash
-# macOS/Linux
+# Mac/Linux
 brew services start mongodb-community
 
 # Windows
 net start MongoDB
 ```
 
-### 2. Backend:
-```bash
-cd backend
-npm install
-npm start
-```
+Then run the same commands as above. The app will automatically connect to Mongo if it's running.
 
-### 3. Frontend:
-```bash
-cd frontend
-npm install
-npm run dev
-```
+## Try It Out
 
-## Testing the App
-
-1. Open http://localhost:5173
-2. Click "Add to Cart" on any product
-3. Cart panel slides open automatically
+1. Go to http://localhost:5173
+2. Click "Add to Cart" on something
+3. Cart opens on the right
 4. Click "Proceed to Checkout"
-5. Fill in name and email
-6. Click "Place Order"
-7. View your receipt!
+5. Type in a name and email
+6. Hit "Place Order"
+7. You'll see a receipt with an order ID
 
-## API Testing
+## Check if the API Works
 
 ```bash
-# Get products
 curl http://localhost:5000/api/products
-
-# Get cart
 curl http://localhost:5000/api/cart
-
-# Health check
 curl http://localhost:5000/api/health
 ```
 
-## Troubleshooting
+## If Something Breaks
 
-**Port already in use:**
-- Backend: Change PORT in backend/.env
-- Frontend: Vite will prompt for alternative port
+**Port 5000 already taken?**
+Change `PORT=5000` in `backend/.env` to something else like 5001
 
-**MongoDB connection error:**
-- App automatically falls back to in-memory storage
-- All features still work!
+**MongoDB not connecting?**
+Don't worry about it - the app will use memory storage instead. Everything still works.
 
-**CORS errors:**
-- Make sure backend is running on port 5000
-- Frontend expects backend at http://localhost:5000
+**Frontend can't reach backend?**
+Make sure the backend is running on port 5000. Frontend is hardcoded to look there.
+
+**Nothing loads?**
+Check both terminals for errors. Usually it's just a port conflict or missing `npm install`.
