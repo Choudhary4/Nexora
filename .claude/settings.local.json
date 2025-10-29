@@ -5,7 +5,9 @@
       "Bash(npm create:*)",
       "Bash(npm install:*)",
       "Bash(tree:*)",
-      "Bash(npx tailwindcss:*)"
+      "Bash(npx tailwindcss:*)",
+      "Bash(dir /s \"d:\\HireAnything\\Nexora\\backend\")",
+      "Bash(dir /s \"d:\\HireAnything\\Nexora\\frontend\\src\")"
     ],
     "deny": [],
     "ask": []
