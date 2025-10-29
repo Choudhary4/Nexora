@@ -224,17 +224,50 @@ When using MongoDB:
 
 ## Screenshots
 
+> **Note**: Add your application screenshots to the `screenshots` folder and they will be displayed here.
+
 ### Product Grid
-The main page displays all available products in a responsive grid layout with hover effects.
+![Product Grid](screenshots/product-grid.png)
+*The main page displays all available products in a responsive grid layout with hover effects.*
 
-### Cart Panel
-Sliding cart panel shows added items with quantities, prices, and removal options.
+### Shopping Cart Panel
+![Cart Panel](screenshots/cart-panel.png)
+*Sliding cart panel shows added items with quantities, prices, and removal options.*
 
-### Checkout Modal
-Clean checkout form with validation for user details.
+### Checkout Flow
+![Checkout Modal](screenshots/checkout-modal.png)
+*Clean checkout form with validation for user details and order summary.*
 
 ### Order Receipt
-Success confirmation with complete order details and unique order ID.
+![Order Receipt](screenshots/receipt-modal.png)
+*Success confirmation with complete order details and unique order ID.*
+
+### Mobile Responsive View
+![Mobile View](screenshots/mobile-view.png)
+*Fully responsive design optimized for mobile devices.*
+
+### How to Add Screenshots
+
+1. Run the application:
+   ```bash
+   npm run dev
+   ```
+
+2. Take screenshots of:
+   - Product grid page
+   - Cart panel (with items)
+   - Checkout modal
+   - Receipt/confirmation modal
+   - Mobile view (use browser DevTools)
+
+3. Save them in the `screenshots` folder with these names:
+   - `product-grid.png`
+   - `cart-panel.png`
+   - `checkout-modal.png`
+   - `receipt-modal.png`
+   - `mobile-view.png`
+
+4. The screenshots will automatically appear in this README!
 
 ## Development
 
