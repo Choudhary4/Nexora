@@ -8,10 +8,12 @@
   width: 90%;
   max-width: 500px;
   max-height: 90vh;
-  overflow-y: auto;
+  overflow: hidden;
   z-index: 1002;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   animation: slideUp 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .receipt-header {
@@ -55,6 +57,14 @@
 
 .receipt-content {
   padding: 2rem;
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.receipt-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .receipt-info {
